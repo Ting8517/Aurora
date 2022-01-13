@@ -15,3 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 //前台
 Route::get('/',[FrontController::class, 'itinerary']);
+//會員系統
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

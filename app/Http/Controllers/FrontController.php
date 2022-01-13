@@ -8,6 +8,6 @@ class FrontController extends Controller
 {
     public function itinerary()
     {
-        return view('itinerary');
+        return view('welcome');
     }
 }
