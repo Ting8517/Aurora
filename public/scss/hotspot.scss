@@ -1,0 +1,433 @@
+/*以下為Banner區 CSS*/
+.map-container{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    #map{ 
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        
+    }
+}
+.hotspot-dropup{
+        
+    z-index: 999;
+    
+    .hotspot-btn{
+        width: 100%;
+        font-size: 20px;
+        font-weight: 600;
+        border: none;
+        background-color: #00ff00;
+    }
+    .location-menu{
+        width: 100%;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0);
+        
+        .location{
+            padding: 10px 0;
+            color: #ffffffd8;
+            text-shadow: 5px 5px 6px rgba(255,255,255,0.7);
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.356);
+            &:hover{
+                background-color: rgba(139, 139, 139, 0.356);
+            }
+        }
+
+    }
+}
+
+
+/*以上為Banner區 CSS*/
+
+/*以下為簡介區 CSS*/
+.location-item{
+    margin-top: 160px;
+    .slogan{
+        font-size: 42px;
+        border: 3px solid;
+        writing-mode: vertical-lr; //文字垂直
+        padding: 40px 10px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 42px;
+            height: 42px;
+            top: -21px;
+            left: -21px;
+            background-color: #00ff00;
+
+        }
+    }
+    .introduce-image{
+
+        h1{
+            font-size: 47.25px;
+        }
+        h1:first-child{
+            color: #00ff00;
+        }
+    }
+    .body{
+        margin-top: 80px;
+        position: relative;
+        .title{
+            position: relative;
+            .dut{
+                position: absolute;
+                top: 50%;
+                left: -40px;
+                transform: translateY(-50%);
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background-color: #00ff00;
+                 &::before{
+                    content: '';
+                    position: absolute;
+                    transform: translate(-50%,-40%);
+                    width: 64px;
+                    height: 64px;
+                    background-size: cover;
+                    background-position: center;
+                    background-image: url(../img/title-icon.svg);
+                    z-index: -1;
+                    
+                }
+            }
+            h2{
+                font-size: 42px;
+                color: #00ff00;
+            }
+        }
+        p{
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .location-item{
+        margin-top: 140px;
+        .slogan{
+            font-size: 32px;
+            padding: 30px 8px;
+            border: 2px solid;
+            &::before{
+                width: 32px;
+                height: 32px;
+                top: -16px;
+                left: -16px;
+            }
+        }
+        .introduce-image{
+            h1{
+                font-size: 37.25px;
+            }
+        }
+        .body{
+            margin-top: 80px;
+            .title{
+                .dut{
+                    left: -30px;
+                    width: 12px;
+                    height: 12px;
+                     &::before{
+                        width: 45px;
+                        height: 45px;
+                    }
+                }
+                h2{
+                    font-size: 32px;
+                }
+            }
+            p{
+                font-size: 24px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+@media (max-width:768px){
+    .location-item{
+        margin-top: 120px;
+        .slogan{
+            font-size: 24px;
+            padding: 20px 5px;
+            border: 2px solid;
+            &::before{
+                width: 24px;
+                height: 24px;
+                top: -12px;
+                left: -12px;
+            }
+        }
+        .introduce-image{
+            h1{
+                font-size: 27.25px;
+            }
+        }
+        .body{
+            margin-top: 60px;
+            .title{
+                .dut{
+                    left: -30px;
+                    width: 12px;
+                    height: 12px;
+                     &::before{
+                        width: 45px;
+                        height: 45px;
+                    }
+                }
+                h2{
+                    font-size: 24px;
+                }
+            }
+            p{
+                font-size: 20px;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .location-item{
+        margin-top: 80px;
+        .slogan{
+            font-size: 20px;
+            padding: 20px 2px;
+            border: 1px solid;
+            &::before{
+                width: 20px;
+                height: 20px;
+                top: -10px;
+                left: -10px;
+            }
+        }
+    }
+}
+
+
+/*以上為簡介區 CSS*/
+
+/*以下為相關行程區 CSS*/
+.other-itinerary{
+    margin-top: 160px;
+    padding: 45px 0;
+    background-color: #262626; 
+    h2{
+        font-size: 47.25px;
+        color: #00ffff;
+    }
+    .swiper-container{ //為了把箭頭跟點點放在外面所以多包了這層
+        position: relative;
+        .swiper{ //主要swiper區
+            width: 100%;
+            height: 100%;
+            margin-bottom: 40px;
+            .swiper-slide{
+                font-size: 18px;
+                .itinerary-card{    //內容
+                    text-decoration: none;
+                    .content{
+                        background-color: #262626;
+                        border: 1px solid #ffffffd8;
+                        transition: 0.5s;
+                        img{
+                            width: 100%;
+                            // height: 50%;
+                            object-fit: cover;
+                        }
+                        h4{
+                            font-size: 26.25px;
+                            color: #00ffff;
+                            font-weight: 600;
+                        }
+                        p{
+                            width: 100%;
+                            font-size: 24px;
+                            color: #ffffffd8;
+                            //多行隱藏文字
+                            overflow : hidden;
+                            text-overflow : ellipsis;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp:3;   //超過3行後面隱藏
+                        }
+                    }          
+                }
+            }
+        }
+        /*以下為相關行程區的箭頭跟點點 CSS*/
+        .swiper-button-prev{
+            position: absolute;
+            top: 50%;
+            left: -5vw;
+            transform: translateY(-50%);
+            color: #FFFFFF;
+        }
+        .swiper-button-next{
+            position: absolute;
+            top: 50%;
+            right: -5vw;
+            transform: translateY(-50%);
+            color: #FFFFFF;
+        }
+        .swiper-pagination{
+            position: absolute;
+            bottom: -5%;
+        }
+        .swiper-pagination-bullet-active{   //點點
+            background-color: #FFFFFF;
+        }
+        /*以上為相關行程區的箭頭跟點點 CSS*/
+    }
+}
+
+@media (max-width:992px) {
+    .other-itinerary{
+        margin-top: 140px;
+        padding: 45px 0;
+        h2{
+            font-size: 37.25px;
+        }
+        .swiper{ //主要swiper區
+            margin-bottom: 40px;
+        }
+    }
+}
+@media (max-width:768px){
+    .other-itinerary{
+        margin-top: 120px;
+    }
+}
+
+@media (max-width:576px) {
+    .other-itinerary{
+        margin-top: 80px;
+        h2{
+           text-align: center;
+        }
+        .swiper-container{
+            .swiper-button-prev{
+                left: 0vw;
+            }
+            .swiper-button-next{
+                right: 0vw;
+            }
+        }
+    }
+}
+
+
+
+/*以上為相關行程簡介區 CSS*/
+
+
+.aurora{
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: -30%;
+        right: 0;
+        width: 50%;
+        height: 60vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../img/極光裝飾線條-右邊.svg);
+        z-index: -2;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: -40%;
+        left: -43%;
+        width: 100%;
+        height: 100vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        background-image: url(../img/極光裝飾線條-左邊.svg);
+        z-index: -2;
+    }
+}
+
+@media (max-width:1200px) {
+    .aurora{
+        &::before{
+            top: -20%;
+            right: 0;
+            width: 40%;
+            height: 60vw;
+        }
+        &::after{
+            bottom: -20%;
+            left: -25%;
+            width: 80%;
+            height: 100vw;
+        }
+    }
+
+}
+
+
+
+@media (max-width:992px) {
+    .aurora{
+        &::before{
+            top: -20%;
+            right: 0;
+            width: 50%;
+            height: 70vw;
+        }
+        &::after{
+            bottom: -15%;
+            left: 0;
+            width: 80%;
+            height: 150vw;
+        }
+    }
+}
+
+
+@media (max-width:768px) {
+    .aurora{
+        &::before{
+            top: -10%;
+            right: 0;
+            width: 50%;
+            height: 70vw;
+        }
+        &::after{
+            bottom: -5%;
+            left: 0;
+            width: 80%;
+            height: 150vw;
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .aurora{
+        &::before{
+            top: -10%;
+            right: 0;
+            width: 70%;
+            height: 150vw;
+        }
+        &::after{
+            bottom: 0;
+            left: 0;
+            width: 120%;
+            height: 200vw;
+        }
+    }
+}

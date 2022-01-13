@@ -1,0 +1,287 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: #ffffff;
+}
+
+/*以下為NavBar區 CSS*/
+.navbar {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.356);
+}
+
+.navbar .navbar-toggler:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.navbar .navbar-collapse .nav-link {
+  font-weight: 700;
+  color: #ffffff !important;
+  text-shadow: 5px 5px 6px rgba(255, 255, 255, 0.7);
+  width: 80px;
+}
+
+.navbar .navbar-collapse .nav-link span:hover {
+  font-size: 0;
+}
+
+.navbar .navbar-collapse .nav-link span:hover::after {
+  font-size: 1rem;
+  font-weight: 500;
+  content: attr(data-hover);
+  text-shadow: 5px 5px 6px rgba(255, 255, 255, 0.7);
+}
+
+/*以下為漢堡條 CSS*/
+.hamburger-btn {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.line {
+  width: 30px;
+  height: 1px;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.line-1 {
+  top: 25%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.line-2 {
+  opacity: 1;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition-duration: 1.2s;
+          transition-duration: 1.2s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.line-3 {
+  top: 75%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/*在不是hover時的動畫效果*/
+.hamburger-btn .line-1, .hamburger-btn .line-3 {
+  -webkit-transition-duration: 0.2s, 0.5s;
+          transition-duration: 0.2s, 0.5s;
+  -webkit-transition-property: top, -webkit-transform;
+  transition-property: top, -webkit-transform;
+  transition-property: transform, top;
+  transition-property: transform, top, -webkit-transform;
+  /*定義哪些 CSS properties 會被轉場效果影響*/
+}
+
+/*在是hover時的動畫效果*/
+.hamburger-btn.open .line-1, .hamburger-btn.open .line-3 {
+  -webkit-transition-duration: 0.2s, 0.5s;
+          transition-duration: 0.2s, 0.5s;
+  -webkit-transition-property: top, -webkit-transform;
+  transition-property: top, -webkit-transform;
+  transition-property: top, transform;
+  transition-property: top, transform, -webkit-transform;
+}
+
+.hamburger-btn.open .line-1 {
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hamburger-btn.open .line-2 {
+  opacity: 0;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.hamburger-btn.open .line-3 {
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*以上漢堡條 CSS*/
+/*以上為NavBar區 CSS*/
+/*以下底部按鈕區*/
+.nxet-page {
+  margin: 120px 0;
+}
+
+.nxet-page .next-btn {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  font-size: 2rem;
+  padding: 10px 0;
+  color: #696868d8;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: #054b31;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.nxet-page .next-btn span:not(:last-child) {
+  position: absolute;
+  display: block;
+}
+
+.nxet-page .next-btn span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#00ff00));
+  background: linear-gradient(90deg, transparent, #00ff00);
+}
+
+.nxet-page .next-btn span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#00ff00));
+  background: linear-gradient(180deg, transparent, #00ff00);
+}
+
+.nxet-page .next-btn span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, right top, left top, from(transparent), to(#00ff00));
+  background: linear-gradient(270deg, transparent, #00ff00);
+}
+
+.nxet-page .next-btn span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#00ff00));
+  background: linear-gradient(360deg, transparent, #00ff00);
+}
+
+.nxet-page .next-btn:hover {
+  color: #000000;
+  background-color: #00ff00;
+  -webkit-box-shadow: 0 0 10px #00ff00, 0 0 40px #00ff00;
+          box-shadow: 0 0 10px #00ff00, 0 0 40px #00ff00;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.nxet-page .next-btn:hover span:nth-child(1) {
+  left: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nxet-page .next-btn:hover span:nth-child(2) {
+  top: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.125s;
+          transition-delay: 0.125s;
+}
+
+.nxet-page .next-btn:hover span:nth-child(3) {
+  right: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.nxet-page .next-btn:hover span:nth-child(4) {
+  bottom: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.375s;
+          transition-delay: 0.375s;
+}
+
+.nxet-page .next-btn:hover span:last-child {
+  position: relative;
+  -webkit-animation-name: drop;
+          animation-name: drop;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+@-webkit-keyframes drop {
+  0% {
+    top: -15px;
+    opacity: 0;
+  }
+  30% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 10px;
+    opacity: 0;
+  }
+}
+
+@keyframes drop {
+  0% {
+    top: -15px;
+    opacity: 0;
+  }
+  30% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 10px;
+    opacity: 0;
+  }
+}
+
+/*以上底部按鈕區*/
+/*以下為footer區*/
+.footer-text {
+  background-color: #adadad;
+}
+
+.footer-text p {
+  margin: 0;
+  color: #000000;
+  font-weight: 500;
+}
+
+/*以上為footer區*/
+/*# sourceMappingURL=layout.css.map */

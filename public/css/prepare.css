@@ -1,0 +1,322 @@
+@charset "UTF-8";
+/*以下為Banner區 CSS*/
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+}
+
+.map-container #map {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hotspot-dropup {
+  z-index: 999;
+}
+
+.hotspot-dropup .hotspot-btn {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  background-color: #00ff00;
+}
+
+.hotspot-dropup .location-menu {
+  width: 100%;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.hotspot-dropup .location-menu .location {
+  padding: 10px 0;
+  color: #ffffffd8;
+  text-shadow: 5px 5px 6px rgba(255, 255, 255, 0.7);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.356);
+}
+
+.hotspot-dropup .location-menu .location:hover {
+  background-color: rgba(139, 139, 139, 0.356);
+}
+
+/*以上為Banner區 CSS*/
+/*以下為行前準備區 CSS*/
+.location-item {
+  margin-top: 160px;
+}
+
+.location-item .slogan {
+  font-size: 42px;
+  border: 3px solid;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  padding: 40px 10px;
+  position: relative;
+}
+
+.location-item .slogan::before {
+  content: '';
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  top: -21px;
+  left: -21px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  -webkit-box-shadow: 10px 21px 0 0 #00ffff;
+          box-shadow: 10px 21px 0 0 #00ffff;
+}
+
+.location-item .preaper-image h1 {
+  font-size: 47.25px;
+}
+
+.location-item .preaper-image h1:first-child {
+  color: #00ff00;
+}
+
+.location-item .body {
+  margin-top: 80px;
+  position: relative;
+}
+
+.location-item .body .title {
+  position: relative;
+}
+
+.location-item .body .title .dut {
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #00ff00;
+}
+
+.location-item .body .title .dut::before {
+  content: '';
+  position: absolute;
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+  width: 64px;
+  height: 64px;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/title-icon.svg);
+  z-index: -1;
+}
+
+.location-item .body .title h2 {
+  font-size: 42px;
+  color: #00ff00;
+}
+
+.location-item .body a, .location-item .body p {
+  font-size: 32px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #ffffffd8;
+}
+
+.location-item .body a:hover {
+  color: #00ffff;
+}
+
+@media (max-width: 992px) {
+  .location-item {
+    margin-top: 140px;
+  }
+  .location-item .slogan {
+    font-size: 32px;
+    padding: 30px 8px;
+    border: 2px solid;
+  }
+  .location-item .slogan::before {
+    width: 32px;
+    height: 32px;
+    top: -16px;
+    left: -16px;
+    -webkit-box-shadow: 8px 16px 0 0 #00ffff;
+            box-shadow: 8px 16px 0 0 #00ffff;
+  }
+  .location-item .preaper-image h1 {
+    font-size: 37.25px;
+  }
+  .location-item .body {
+    margin-top: 80px;
+  }
+  .location-item .body .title .dut {
+    left: -30px;
+    width: 12px;
+    height: 12px;
+  }
+  .location-item .body .title .dut::before {
+    width: 45px;
+    height: 45px;
+  }
+  .location-item .body .title h2 {
+    font-size: 32px;
+  }
+  .location-item .body a, .location-item .body p {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 768px) {
+  .location-item {
+    margin-top: 120px;
+  }
+  .location-item .slogan {
+    font-size: 24px;
+    padding: 20px 5px;
+    border: 2px solid;
+  }
+  .location-item .slogan::before {
+    width: 24px;
+    height: 24px;
+    top: -12px;
+    left: -12px;
+    -webkit-box-shadow: 6px 12px 0 0 #00ffff;
+            box-shadow: 6px 12px 0 0 #00ffff;
+  }
+  .location-item .preaper-image h1 {
+    font-size: 27.25px;
+  }
+  .location-item .body {
+    margin-top: 60px;
+  }
+  .location-item .body .title .dut {
+    left: -30px;
+    width: 12px;
+    height: 12px;
+  }
+  .location-item .body .title .dut::before {
+    width: 45px;
+    height: 45px;
+  }
+  .location-item .body .title h2 {
+    font-size: 24px;
+  }
+  .location-item .body a, .location-item .body p {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 576px) {
+  .location-item {
+    margin-top: 80px;
+  }
+  .location-item .slogan {
+    font-size: 20px;
+    padding: 20px 2px;
+    border: 1px solid;
+  }
+  .location-item .slogan::before {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    left: -10px;
+  }
+}
+
+/*以上為行前準備區 CSS*/
+.aurora {
+  position: relative;
+}
+
+.aurora::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: 0;
+  width: 50%;
+  height: 60vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/極光裝飾線條-右邊.svg);
+  z-index: -2;
+}
+
+.aurora::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -35%;
+  width: 100%;
+  height: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  background-image: url(../img/極光裝飾線條-左邊.svg);
+  z-index: -2;
+}
+
+@media (max-width: 1200px) {
+  .aurora::before {
+    top: -20%;
+    right: 0;
+    width: 50%;
+    height: 70vw;
+  }
+  .aurora::after {
+    bottom: 0;
+    left: -10%;
+    width: 80%;
+    height: 100vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .aurora::before {
+    top: -20%;
+    right: 0;
+    width: 50%;
+    height: 70vw;
+  }
+  .aurora::after {
+    bottom: -15%;
+    left: 0;
+    width: 100%;
+    height: 150vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .aurora::before {
+    top: -10%;
+    right: 0;
+    width: 50%;
+    height: 70vw;
+  }
+  .aurora::after {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .aurora::before {
+    top: -10%;
+    right: 0;
+    width: 70%;
+    height: 150vw;
+  }
+  .aurora::after {
+    bottom: 0;
+    left: -15%;
+    width: 120%;
+    height: 200vw;
+  }
+}
+/*# sourceMappingURL=prepare.css.map */

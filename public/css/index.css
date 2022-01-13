@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/*以下為Banner-1區 CSS*/
+.banner1 {
+  background-image: url(../img/index/index-banner1-1-1920.jpg);
+  width: 100%;
+  height: 56.24vw;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner1 p {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .banner1 p {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner1 p {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner1 {
+    background-image: url(../img/index/index-banner1-1-1920.jpg);
+    height: 89.06vw;
+  }
+  .banner1 p {
+    font-size: 18px;
+  }
+}
+
+/*以上為Banner-1區 CSS*/
+/*以下為文字區塊說區 CSS*/
+.text-block {
+  margin-top: 100px;
+}
+
+.text-block h1 {
+  font-size: 63.75px;
+  color: #00ff00;
+}
+
+.text-block h2 {
+  font-size: 42px;
+}
+
+.text-block p {
+  font-size: 30px;
+}
+
+.text-block .set-up {
+  margin-top: -100px;
+  z-index: -1;
+}
+
+@media (max-width: 992px) {
+  .text-block {
+    margin-top: 80px;
+  }
+  .text-block h1 {
+    font-size: 53.75px;
+  }
+  .text-block h2 {
+    font-size: 36px;
+  }
+  .text-block p {
+    font-size: 20px;
+  }
+  .text-block .set-up {
+    margin-top: -80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-block {
+    margin-top: 80px;
+  }
+  .text-block .set-up {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-block {
+    margin-top: 40px;
+  }
+  .text-block h1 {
+    font-size: 43.75px;
+  }
+  .text-block h2 {
+    font-size: 30px;
+  }
+  .text-block p {
+    font-size: 18px;
+  }
+}
+
+/*以上文字區塊區 CSS*/
+/*以下為Banner-2區 CSS*/
+.banner2-text {
+  margin-top: 70px;
+  background-color: #383838;
+}
+
+.banner2-text p {
+  font-size: 30px;
+  color: #00ff00;
+}
+
+.banner2 {
+  background-image: url(../img/index/index-banner2-1-1920.png);
+  width: 100%;
+  height: 50vw;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 992px) {
+  .banner2-text p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner2 {
+    background-image: url(../img/index/index-banner2-2-768.png);
+    width: 100%;
+    height: 79vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner2-text p {
+    font-size: 18px;
+  }
+}
+
+/*以上為Banner-2區 CSS*/
+/* 以下極光成因區 CSS */
+.factor-image1 {
+  width: 54.5%;
+  height: 0;
+  padding-bottom: 36.77%;
+  background-size: cover;
+  background-image: url(../img/index/index-04.png);
+}
+
+.factor-image2 {
+  width: 43.4%;
+  height: 0;
+  padding-bottom: 55.96%;
+  background-size: cover;
+  background-position: right;
+  background-image: url(../img/index/index-05.png);
+}
+
+@media (max-width: 768px) {
+  .factor-image1 {
+    width: 95%;
+    padding-bottom: 63%;
+  }
+  .factor-image2 {
+    width: 76%;
+    padding-bottom: 98%;
+  }
+}
+
+/* 以上極光成因區 CSS */
+.aurora-left {
+  position: relative;
+}
+
+.aurora-left::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -43%;
+  width: 100%;
+  height: 80vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/極光裝飾線條-左邊.svg);
+  z-index: -2;
+}
+
+.aurora-right {
+  position: relative;
+}
+
+.aurora-right::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: 0;
+  width: 50%;
+  height: 80vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/極光裝飾線條-右邊.svg);
+  z-index: -2;
+}
+/*# sourceMappingURL=index.css.map */
