@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\ItineraryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +16,17 @@ use App\Http\Controllers\FrontController;
 |
 */
 //前台
-Route::get('/',[FrontController::class, 'itinerary']);
-//會員系統
+Route::get('/',[FrontController::class,'itinerary']);
+
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class,'index'])->name('home');
+
+//後台
+Route::prefix('/admin')->group(function (){
+    //相關行程
+    Route::prefix('/itinerary')->group(function (){
+        //後臺列表頁
+        Route::get('/',[ItineraryController::class,'index']);
+    });
+});
