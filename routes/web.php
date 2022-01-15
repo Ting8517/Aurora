@@ -27,6 +27,11 @@ Route::prefix('/admin')->group(function (){
     //相關行程
     Route::prefix('/itinerary')->group(function (){
         //後臺列表頁
-        Route::get('/',[ItineraryController::class,'index']);
+        Route::get('/',[ItineraryController::class,'index'])->name('itinerary.index');
+        Route::get('/create',[ItineraryController::class,'create'])->name('itinerary.create');
+        Route::post('/',[ItineraryController::class,'store'])->name('itinerary.store');
+        Route::get('/{id}/edit',[ItineraryController::class,'edit'])->name('itinerary.edit');
+        Route::patch('/{id}',[ItineraryController::class,'update'])->name('itinerary.update');
+        Route::delete('/{id}',[ItineraryController::class,'destroy'])->name('itinerary.destroy');
     });
 });
