@@ -1,0 +1,261 @@
+/*以下為Banner區 CSS*/
+.banner{
+    width: 100%;
+    height: 56.25vw;
+    position: relative;
+    overflow: hidden;
+    .layer{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        pointer-events: none;
+        &.sky{
+            background-image: url(../img/qa/q&a-banner-layer1-sky.png);
+        }
+        &.person{
+            background-image: url(../img/qa/q&a-banner-layer2-persone.png);
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .banner{
+        height: 89.06vw;
+    }
+}
+/*以上為Banner區 CSS*/
+
+
+/*以下為常見問題區 CSS*/
+.question{
+    margin-top: 6rem;
+    position: relative;
+    .slogan{
+        position: absolute;
+        right: 0;
+        font-size: 5.625rem;
+        writing-mode: vertical-lr; //文字垂直
+        white-space:nowrap;  //不換行
+        color: #666666;
+        z-index: -1;
+    }
+    
+    .question-explain{
+        h2{
+            font-size: 2.95rem;
+            color: #00ffff;
+        }
+        h3{
+            font-size: 2.203rem;
+            margin-bottom: 3.5rem;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+    }
+
+    /* Q&A區 CSS*/
+    .accordion-item{
+        background-color: rgba(0, 0, 0, 0);
+        .accordion-header{
+            position: relative;
+            .accordion-button {
+                font-size: 2.203rem;
+                font-weight: 500;
+                color: #00fff0;
+                background-color: rgba(0, 0, 0, 0);
+                margin-bottom: 0;
+                border-bottom: 1px solid #00ffff;
+            }
+            .accordion-button::after{
+                width: 2rem;
+                height: 2rem;
+                background-image: url(../img/qa/qa-arrow.png);
+                background-size: 2rem;
+                // transition: transform .2s ease-in-out;
+            }
+            .accordion-button:not(.collapsed)::after{
+                background-image: url(../img/qa/qa-arrow.png);
+                // transform: rotate(-180deg);
+            }
+
+        }
+        .accordion-body {
+            font-size: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.12);
+            h3{
+                color: #0099FF;
+            }
+            h4{
+                color: #33FF99;
+            }
+        }
+    }
+}
+
+
+@media (max-width:1300px) {
+    html{
+        font-size: 13px;
+    }
+}
+
+@media (max-width:1080px) {
+    .new-container{
+        padding: 0 13%;
+    }
+    .question{
+        .slogan{
+            top: -7.5rem;
+            font-size: 4.625rem;
+            writing-mode: horizontal-tb;  //文字水平
+        }
+    }
+
+}
+
+@media (max-width:768px){
+    .question{
+        margin-top: 6rem;
+        
+        .question-explain{
+            h2{
+                font-size: 2.2rem;
+                color: #00ffff;
+            }
+            h3{
+                font-size: 1.8rem;
+                margin-bottom: 3.5rem;
+            }
+            p{
+                font-size: 1.5rem;
+            }
+        }
+        /* Q&A區 CSS*/
+        .accordion-item{
+            .accordion-header{
+                .accordion-button {
+                    font-size: 1.7rem;
+                }
+                .accordion-button::after{
+                    width: 1.543rem;
+                    height: 1.543rem;
+                    background-size: 1.543rem;
+                }
+
+            }
+            .accordion-body {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .question{
+        .slogan{
+            font-size: 3rem;
+            top: -7rem;
+        }
+        
+        /* Q&A區 CSS*/
+        .accordion-item{
+            .accordion-header{
+                .accordion-button {
+                    font-size: 1.3rem;
+                }
+                .accordion-button::after{
+                    width: 1.243rem;
+                    height: 1.243rem;
+                    background-size: 1.243rem;
+                }
+
+            }
+            .accordion-body {
+                font-size: 1.25rem;
+                h3{
+                    font-size: 1.3rem;
+                }
+                h4{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+
+/*以上為常見問題區 CSS*/
+
+
+/*以下聯絡我們區 CSS*/
+.contact{
+    margin-top: 6rem;
+    
+    .form-floating{
+        .form-control{
+            background-color: #666666;
+            border: none;
+            border-radius: 0%;
+            color: #ffffffd8;
+            font-size: 1.5rem;
+        }
+        label{
+            color: #ffffffd8;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+        textarea{
+            height: 31.25rem;
+        }
+    }
+    button{
+        width: 250px;
+        font-size: 2rem;
+        padding: 10px 0;
+        color: #ffffffd8;
+        border-radius: 0;
+        background-color: #666666;
+        margin: 48px auto;
+        &:active{
+            transform: scale(0.9);
+        }
+        &:hover{
+            color: #00ffff;
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .contact{
+
+        
+        .form-floating{
+
+            textarea{
+                height: 21.25rem;
+            }
+        }
+        button{
+            width: 150px;
+            font-size: 1.5rem;
+            padding: 10px 0;
+            color: #ffffffd8;
+            border-radius: 0;
+            background-color: #666666;
+            margin: 48px auto;
+            &:active{
+                transform: scale(0.9);
+            }
+            &:hover{
+                color: #00ffff;
+            }
+        }
+    }
+}
+
+/*以上聯絡我們區 CSS*/
+

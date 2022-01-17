@@ -1,37 +1,84 @@
 @charset "UTF-8";
 /*以下為Banner-1區 CSS*/
 .banner1 {
-  background-image: url(../img/index/index-banner1-1-1920.jpg);
   width: 100%;
-  height: 56.24vw;
-  background-size: cover;
-  background-position: center;
+  height: 56.25vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0c3329), to(#000000));
+  background: linear-gradient(#0c3329, #000000);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
 }
 
-.banner1 p {
-  font-size: 42px;
-  font-weight: 600;
+.banner1 .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  pointer-events: none;
+}
+
+.banner1 .layer.aurora {
+  background-image: url(../img/index/index-banner1-layer1-aurora.png);
+}
+
+.banner1 .layer.mountain {
+  background-image: url(../img/index/index-banner1-layer2-mountion.png);
+}
+
+.banner1 .layer.lake {
+  background-image: url(../img/index/index-banner1-layer3-lake.png);
+}
+
+.banner1 .layer.person {
+  background-image: url(../img/index/index-banner1-layer4-person.png);
+}
+
+.banner1 .layer.rock {
+  background-image: url(../img/index/index-banner1-layer5-rock.png);
+}
+
+.banner1 h1 {
+  position: absolute;
+  top: 25%;
+  font-size: 5.5vw;
+  white-space: nowrap;
+  text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.781);
 }
 
 @media (max-width: 1200px) {
-  .banner1 p {
-    font-size: 32px;
+  .banner1 h1 {
+    top: 30%;
   }
 }
 
 @media (max-width: 768px) {
-  .banner1 p {
-    font-size: 22px;
+  .banner1 h1 {
+    top: 35%;
   }
 }
 
 @media (max-width: 576px) {
   .banner1 {
-    background-image: url(../img/index/index-banner1-1-1920.jpg);
+    background-size: cover;
+    background-image: url(../img/index/index-banner1-full-576.jpg);
     height: 89.06vw;
   }
-  .banner1 p {
-    font-size: 18px;
+  .banner1 .layer {
+    display: none;
+  }
+  .banner1 h1 {
+    display: none;
   }
 }
 
@@ -43,7 +90,7 @@
 
 .text-block h1 {
   font-size: 63.75px;
-  color: #00ff00;
+  color: #00ff66;
 }
 
 .text-block h2 {
@@ -110,7 +157,7 @@
 
 .banner2-text p {
   font-size: 30px;
-  color: #00ff00;
+  color: #00ff66;
 }
 
 .banner2 {
@@ -172,37 +219,4 @@
 }
 
 /* 以上極光成因區 CSS */
-.aurora-left {
-  position: relative;
-}
-
-.aurora-left::before {
-  content: '';
-  position: absolute;
-  top: -10%;
-  left: -43%;
-  width: 100%;
-  height: 80vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../img/極光裝飾線條-左邊.svg);
-  z-index: -2;
-}
-
-.aurora-right {
-  position: relative;
-}
-
-.aurora-right::before {
-  content: '';
-  position: absolute;
-  top: -30%;
-  right: 0;
-  width: 50%;
-  height: 80vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../img/極光裝飾線條-右邊.svg);
-  z-index: -2;
-}
 /*# sourceMappingURL=index.css.map */

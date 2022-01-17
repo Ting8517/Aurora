@@ -1,230 +1,608 @@
 @charset "UTF-8";
 /*以下為Banner區 CSS*/
 .map-container {
-  position: relative;
   width: 100%;
   height: 80vh;
+  border-bottom: 15px solid #00ff66;
 }
 
 .map-container #map {
   width: 100%;
   height: 100%;
   z-index: 0;
-}
-
-.hotspot-dropup {
-  z-index: 999;
-}
-
-.hotspot-dropup .hotspot-btn {
-  width: 100%;
-  font-size: 20px;
-  font-weight: 600;
-  border: none;
-  background-color: #00ff00;
-}
-
-.hotspot-dropup .location-menu {
-  width: 100%;
-  padding: 0;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.hotspot-dropup .location-menu .location {
-  padding: 10px 0;
-  color: #ffffffd8;
-  text-shadow: 5px 5px 6px rgba(255, 255, 255, 0.7);
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.356);
-}
-
-.hotspot-dropup .location-menu .location:hover {
-  background-color: rgba(139, 139, 139, 0.356);
+  background-size: cover;
 }
 
 /*以上為Banner區 CSS*/
 /*以下為簡介區 CSS*/
 .location-item {
-  margin-top: 160px;
+  margin-top: 6rem;
+  position: relative;
 }
 
 .location-item .slogan {
-  font-size: 42px;
-  border: 3px solid;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 5.625rem;
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
-  padding: 40px 10px;
-  position: relative;
-}
-
-.location-item .slogan::before {
-  content: '';
-  position: absolute;
-  width: 42px;
-  height: 42px;
-  top: -21px;
-  left: -21px;
-  background-color: #00ff00;
-}
-
-.location-item .introduce-image h1 {
-  font-size: 47.25px;
-}
-
-.location-item .introduce-image h1:first-child {
-  color: #00ff00;
-}
-
-.location-item .body {
-  margin-top: 80px;
-  position: relative;
-}
-
-.location-item .body .title {
-  position: relative;
-}
-
-.location-item .body .title .dut {
-  position: absolute;
-  top: 50%;
-  left: -40px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: #00ff00;
-}
-
-.location-item .body .title .dut::before {
-  content: '';
-  position: absolute;
-  -webkit-transform: translate(-50%, -40%);
-          transform: translate(-50%, -40%);
-  width: 64px;
-  height: 64px;
-  background-size: cover;
-  background-position: center;
-  background-image: url(../img/title-icon.svg);
+  color: #666666;
   z-index: -1;
 }
 
-.location-item .body .title h2 {
-  font-size: 42px;
-  color: #00ff00;
+.location-item .slogan span:last-child {
+  margin-top: 11.25rem;
 }
 
-.location-item .body p {
-  font-size: 32px;
-  letter-spacing: 2px;
+.location-item .country {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.location-item .country h2 {
+  margin: 0 auto;
+  font-size: 5.766rem;
+  color: #00ff66;
+}
+
+.location-item .country h2 span {
+  font-size: 2.766rem;
+}
+
+.location-item .country h3 {
+  margin-left: 36.1%;
+  font-size: 2.766rem;
+}
+
+.location-item .other-info {
+  position: relative;
+  width: 100%;
+  margin-top: 6rem;
+}
+
+.location-item .other-info .info-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56.25vw;
+  z-index: 2;
+}
+
+.location-item .other-info .info-list .info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 9.3755rem;
+}
+
+.location-item .other-info .info-list .info-item button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 3.125rem;
+  height: 3.125rem;
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 1.64rem;
+}
+
+.location-item .other-info .info-list .info-item.feature {
+  top: 10%;
+  left: 40%;
+}
+
+.location-item .other-info .info-list .info-item.kp {
+  top: 28%;
+  left: 18%;
+}
+
+.location-item .other-info .info-list .info-item.probability {
+  top: 45%;
+  left: 30%;
+}
+
+.location-item .other-info .info-list .info-item.traffic {
+  top: 45%;
+  left: 55%;
+}
+
+.location-item .other-info .info-list .info-item.people {
+  top: 38%;
+  left: 75%;
+}
+
+.location-item .other-info .info-list .info-item.period {
+  top: 10%;
+  left: 55%;
+}
+
+.location-item .other-info .info-list .info-item .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  color: #000000;
+  font-weight: 600;
+  background-color: #cccccc;
+  border-radius: 3px;
+  position: relative;
+}
+
+.location-item .other-info .info-list .info-item .info::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  border-style: solid;
+  border-color: #cccccc transparent;
+  border-width: 0px 20px 20px;
+  top: -20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.location-item .introduce {
+  margin-top: 6rem;
+}
+
+.location-item .introduce h2 {
+  font-size: 2.625rem;
+  color: #00ff66;
+}
+
+.location-item .introduce p {
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  line-break: anywhere;
+}
+
+/* 以下為極光熱點其他資訊按鈕動畫 */
+.anim-1 {
+  -webkit-animation-name: float-1;
+          animation-name: float-1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-duration: 6.17418s;
+          animation-duration: 6.17418s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.anim-2 {
+  -webkit-animation-name: float-2;
+          animation-name: float-2;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-duration: 5.3957s;
+          animation-duration: 5.3957s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.anim-3 {
+  -webkit-animation-name: float-3;
+          animation-name: float-3;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-duration: 7.93174s;
+          animation-duration: 7.93174s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.anim-4 {
+  -webkit-animation-name: float-4;
+          animation-name: float-4;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-duration: 6.90034s;
+          animation-duration: 6.90034s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.anim-5 {
+  -webkit-animation-name: float-5;
+          animation-name: float-5;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-duration: 6.00321s;
+          animation-duration: 6.00321s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.anim-6 {
+  -webkit-animation-name: float-6;
+          animation-name: float-6;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-duration: 6.31437s;
+          animation-duration: 6.31437s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes float-1 {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  50% {
+    -webkit-transform: rotateZ(-1.49589deg) translateY(14.00077px);
+            transform: rotateZ(-1.49589deg) translateY(14.00077px);
+  }
+  100% {
+    -webkit-transform: rotateZ(0.75821deg) translateY(-5.0779px);
+            transform: rotateZ(0.75821deg) translateY(-5.0779px);
+  }
+}
+
+@keyframes float-1 {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  50% {
+    -webkit-transform: rotateZ(-1.49589deg) translateY(14.00077px);
+            transform: rotateZ(-1.49589deg) translateY(14.00077px);
+  }
+  100% {
+    -webkit-transform: rotateZ(0.75821deg) translateY(-5.0779px);
+            transform: rotateZ(0.75821deg) translateY(-5.0779px);
+  }
+}
+
+@-webkit-keyframes float-2 {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  50% {
+    -webkit-transform: rotateZ(-1.61128deg) translateY(6.38206px);
+            transform: rotateZ(-1.61128deg) translateY(6.38206px);
+  }
+  100% {
+    -webkit-transform: rotateZ(0.18022deg) translateY(-15.75503px);
+            transform: rotateZ(0.18022deg) translateY(-15.75503px);
+  }
+}
+
+@keyframes float-2 {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  50% {
+    -webkit-transform: rotateZ(-1.61128deg) translateY(6.38206px);
+            transform: rotateZ(-1.61128deg) translateY(6.38206px);
+  }
+  100% {
+    -webkit-transform: rotateZ(0.18022deg) translateY(-15.75503px);
+            transform: rotateZ(0.18022deg) translateY(-15.75503px);
+  }
+}
+
+@-webkit-keyframes float-3 {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  50% {
+    -webkit-transform: rotateZ(-0.90105deg) translateY(10.08377px);
+            transform: rotateZ(-0.90105deg) translateY(10.08377px);
+  }
+  100% {
+    -webkit-transform: rotateZ(1.75746deg) translateY(-11.87913px);
+            transform: rotateZ(1.75746deg) translateY(-11.87913px);
+  }
+}
+
+@keyframes float-3 {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  50% {
+    -webkit-transform: rotateZ(-0.90105deg) translateY(10.08377px);
+            transform: rotateZ(-0.90105deg) translateY(10.08377px);
+  }
+  100% {
+    -webkit-transform: rotateZ(1.75746deg) translateY(-11.87913px);
+            transform: rotateZ(1.75746deg) translateY(-11.87913px);
+  }
+}
+
+@-webkit-keyframes float-4 {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  50% {
+    -webkit-transform: rotateZ(-1.86405deg) translateY(16.16295px);
+            transform: rotateZ(-1.86405deg) translateY(16.16295px);
+  }
+  100% {
+    -webkit-transform: rotateZ(1.16112deg) translateY(-14.83167px);
+            transform: rotateZ(1.16112deg) translateY(-14.83167px);
+  }
+}
+
+@keyframes float-4 {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  50% {
+    -webkit-transform: rotateZ(-1.86405deg) translateY(16.16295px);
+            transform: rotateZ(-1.86405deg) translateY(16.16295px);
+  }
+  100% {
+    -webkit-transform: rotateZ(1.16112deg) translateY(-14.83167px);
+            transform: rotateZ(1.16112deg) translateY(-14.83167px);
+  }
+}
+
+@-webkit-keyframes float-5 {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  50% {
+    -webkit-transform: rotateZ(-0.26424deg) translateY(16.55085px);
+            transform: rotateZ(-0.26424deg) translateY(16.55085px);
+  }
+  100% {
+    -webkit-transform: rotateZ(1.39077deg) translateY(-16.80678px);
+            transform: rotateZ(1.39077deg) translateY(-16.80678px);
+  }
+}
+
+@keyframes float-5 {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  50% {
+    -webkit-transform: rotateZ(-0.26424deg) translateY(16.55085px);
+            transform: rotateZ(-0.26424deg) translateY(16.55085px);
+  }
+  100% {
+    -webkit-transform: rotateZ(1.39077deg) translateY(-16.80678px);
+            transform: rotateZ(1.39077deg) translateY(-16.80678px);
+  }
+}
+
+@-webkit-keyframes float-6 {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  50% {
+    -webkit-transform: rotateZ(-0.51047deg) translateY(9.52905px);
+            transform: rotateZ(-0.51047deg) translateY(9.52905px);
+  }
+  100% {
+    -webkit-transform: rotateZ(1.66402deg) translateY(-5.83597px);
+            transform: rotateZ(1.66402deg) translateY(-5.83597px);
+  }
+}
+
+@keyframes float-6 {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  50% {
+    -webkit-transform: rotateZ(-0.51047deg) translateY(9.52905px);
+            transform: rotateZ(-0.51047deg) translateY(9.52905px);
+  }
+  100% {
+    -webkit-transform: rotateZ(1.66402deg) translateY(-5.83597px);
+            transform: rotateZ(1.66402deg) translateY(-5.83597px);
+  }
+}
+
+@-webkit-keyframes info-button-list-anim {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  75% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes info-button-list-anim {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  75% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/* 以上為極光熱點資訊按鈕動畫 */
+@media (max-width: 1400px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 992px) {
-  .location-item {
-    margin-top: 140px;
-  }
   .location-item .slogan {
-    font-size: 32px;
-    padding: 30px 8px;
-    border: 2px solid;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-size: 3.625rem;
   }
-  .location-item .slogan::before {
-    width: 32px;
-    height: 32px;
-    top: -16px;
-    left: -16px;
+  .location-item .slogan span:last-child {
+    margin-top: 0;
   }
-  .location-item .introduce-image h1 {
-    font-size: 37.25px;
+  .location-item .country h2 {
+    font-size: 4.766rem;
   }
-  .location-item .body {
-    margin-top: 80px;
+  .location-item .country h2 span {
+    font-size: 2.286rem;
   }
-  .location-item .body .title .dut {
-    left: -30px;
-    width: 12px;
-    height: 12px;
-  }
-  .location-item .body .title .dut::before {
-    width: 45px;
-    height: 45px;
-  }
-  .location-item .body .title h2 {
-    font-size: 32px;
-  }
-  .location-item .body p {
-    font-size: 24px;
-    letter-spacing: 1px;
+  .location-item .country h3 {
+    font-size: 2.286rem;
   }
 }
 
 @media (max-width: 768px) {
-  .location-item {
-    margin-top: 120px;
-  }
   .location-item .slogan {
-    font-size: 24px;
-    padding: 20px 5px;
-    border: 2px solid;
-  }
-  .location-item .slogan::before {
-    width: 24px;
-    height: 24px;
-    top: -12px;
-    left: -12px;
-  }
-  .location-item .introduce-image h1 {
-    font-size: 27.25px;
-  }
-  .location-item .body {
-    margin-top: 60px;
-  }
-  .location-item .body .title .dut {
-    left: -30px;
-    width: 12px;
-    height: 12px;
-  }
-  .location-item .body .title .dut::before {
-    width: 45px;
-    height: 45px;
-  }
-  .location-item .body .title h2 {
-    font-size: 24px;
-  }
-  .location-item .body p {
-    font-size: 20px;
-    letter-spacing: 2px;
+    top: 2%;
   }
 }
 
 @media (max-width: 576px) {
-  .location-item {
-    margin-top: 80px;
-  }
   .location-item .slogan {
-    font-size: 20px;
-    padding: 20px 2px;
-    border: 1px solid;
+    font-size: 2.625rem;
   }
-  .location-item .slogan::before {
-    width: 20px;
-    height: 20px;
-    top: -10px;
-    left: -10px;
+  .location-item .country h2 {
+    font-size: 3.766rem;
+  }
+  .location-item .country h2 span {
+    font-size: 1.806rem;
+  }
+  .location-item .country h3 {
+    font-size: 1.806rem;
+  }
+  .location-item .other-info .info-list .info-item.feature {
+    top: 15%;
+    left: 28%;
+  }
+  .location-item .other-info .info-list .info-item.kp {
+    top: 28%;
+    left: 3%;
+  }
+  .location-item .other-info .info-list .info-item.probability {
+    top: 55%;
+    left: 20%;
+  }
+  .location-item .other-info .info-list .info-item.traffic {
+    top: 50%;
+    left: 45%;
+  }
+  .location-item .other-info .info-list .info-item.people {
+    top: 38%;
+    left: 70%;
+  }
+  .location-item .other-info .info-list .info-item.period {
+    top: 15%;
+    left: 55%;
+  }
+  .location-item .introduce h2 {
+    font-size: 2.2rem;
+  }
+  .location-item .introduce p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .location-item .slogan {
+    font-size: 1.625rem;
+    font-weight: 600;
+  }
+  .location-item .country h2 {
+    font-size: 2.766rem;
+  }
+  .location-item .country h2 span {
+    font-size: 1.326rem;
+  }
+  .location-item .country h3 {
+    font-size: 1.326rem;
   }
 }
 
 /*以上為簡介區 CSS*/
 /*以下為相關行程區 CSS*/
 .other-itinerary {
-  margin-top: 160px;
+  margin-top: 6rem;
   padding: 45px 0;
   background-color: #262626;
 }
 
 .other-itinerary h2 {
-  font-size: 47.25px;
+  font-size: 2.95rem;
   color: #00ffff;
 }
 
@@ -241,7 +619,7 @@
 }
 
 .other-itinerary .swiper-container .swiper .swiper-slide {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .other-itinerary .swiper-container .swiper .swiper-slide .itinerary-card {
@@ -262,14 +640,14 @@
 }
 
 .other-itinerary .swiper-container .swiper .swiper-slide .itinerary-card .content h4 {
-  font-size: 26.25px;
+  font-size: 1.64rem;
   color: #00ffff;
   font-weight: 600;
 }
 
 .other-itinerary .swiper-container .swiper .swiper-slide .itinerary-card .content p {
   width: 100%;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #ffffffd8;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -278,22 +656,20 @@
   -webkit-line-clamp: 3;
 }
 
-.other-itinerary .swiper-container .swiper-button-prev {
+.other-itinerary .swiper-container .swiper-button-prev, .other-itinerary .swiper-container .swiper-button-next {
   position: absolute;
   top: 50%;
-  left: -5vw;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   color: #FFFFFF;
 }
 
+.other-itinerary .swiper-container .swiper-button-prev {
+  left: -4vw;
+}
+
 .other-itinerary .swiper-container .swiper-button-next {
-  position: absolute;
-  top: 50%;
-  right: -5vw;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  color: #FFFFFF;
+  right: -4vw;
 }
 
 .other-itinerary .swiper-container .swiper-pagination {
@@ -305,129 +681,14 @@
   background-color: #FFFFFF;
 }
 
-@media (max-width: 992px) {
-  .other-itinerary {
-    margin-top: 140px;
-    padding: 45px 0;
-  }
-  .other-itinerary h2 {
-    font-size: 37.25px;
-  }
-  .other-itinerary .swiper {
-    margin-bottom: 40px;
-  }
-}
-
 @media (max-width: 768px) {
-  .other-itinerary {
-    margin-top: 120px;
+  .other-itinerary .swiper-container .swiper .swiper-slide .itinerary-card .content h4 {
+    font-size: 1.64rem;
   }
-}
-
-@media (max-width: 576px) {
-  .other-itinerary {
-    margin-top: 80px;
-  }
-  .other-itinerary h2 {
-    text-align: center;
-  }
-  .other-itinerary .swiper-container .swiper-button-prev {
-    left: 0vw;
-  }
-  .other-itinerary .swiper-container .swiper-button-next {
-    right: 0vw;
+  .other-itinerary .swiper-container .swiper .swiper-slide .itinerary-card .content p {
+    font-size: 1.3rem;
   }
 }
 
 /*以上為相關行程簡介區 CSS*/
-.aurora {
-  position: relative;
-}
-
-.aurora::before {
-  content: '';
-  position: absolute;
-  top: -30%;
-  right: 0;
-  width: 50%;
-  height: 60vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../img/極光裝飾線條-右邊.svg);
-  z-index: -2;
-}
-
-.aurora::after {
-  content: '';
-  position: absolute;
-  bottom: -40%;
-  left: -43%;
-  width: 100%;
-  height: 100vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
-  background-image: url(../img/極光裝飾線條-左邊.svg);
-  z-index: -2;
-}
-
-@media (max-width: 1200px) {
-  .aurora::before {
-    top: -20%;
-    right: 0;
-    width: 40%;
-    height: 60vw;
-  }
-  .aurora::after {
-    bottom: -20%;
-    left: -25%;
-    width: 80%;
-    height: 100vw;
-  }
-}
-
-@media (max-width: 992px) {
-  .aurora::before {
-    top: -20%;
-    right: 0;
-    width: 50%;
-    height: 70vw;
-  }
-  .aurora::after {
-    bottom: -15%;
-    left: 0;
-    width: 80%;
-    height: 150vw;
-  }
-}
-
-@media (max-width: 768px) {
-  .aurora::before {
-    top: -10%;
-    right: 0;
-    width: 50%;
-    height: 70vw;
-  }
-  .aurora::after {
-    bottom: -5%;
-    left: 0;
-    width: 80%;
-    height: 150vw;
-  }
-}
-
-@media (max-width: 576px) {
-  .aurora::before {
-    top: -10%;
-    right: 0;
-    width: 70%;
-    height: 150vw;
-  }
-  .aurora::after {
-    bottom: 0;
-    left: 0;
-    width: 120%;
-    height: 200vw;
-  }
-}
 /*# sourceMappingURL=hotspot.css.map */

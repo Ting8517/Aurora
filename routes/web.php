@@ -16,7 +16,9 @@ use App\Http\Controllers\ItineraryController;
 |
 */
 //前台
-Route::get('/',[FrontController::class,'itinerary']);
+Route::get('/',[FrontController::class,'index'])->name('front.index');
+Route::get('/itinerary',[FrontController::class,'itinerary'])->name('front.itinerary');
+Route::get('/QA',[FrontController::class,'QA'])->name('front.QA');
 
 Auth::routes();
 
@@ -35,3 +37,6 @@ Route::prefix('/admin')->group(function (){
         Route::delete('/{id}',[ItineraryController::class,'destroy'])->name('itinerary.destroy');
     });
 });
+
+//聯絡我們
+Route::post('/contact',[FrontController::class,'contact']);

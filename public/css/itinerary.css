@@ -1,246 +1,148 @@
 @charset "UTF-8";
 /*以下為Banner區 CSS*/
 .banner {
-  background-image: url(../img/itinerary/itinerary-banner-1920.jpg);
   width: 100%;
-  height: 56.24vw;
+  height: 56.25vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
+  pointer-events: none;
+}
+
+.banner .layer.scenery {
   background-position: center;
+  background-image: url(../img/itinerary/itinerary-banner-layer1-scenery.png);
+  position: relative;
 }
 
-.banner p {
-  font-size: 42px;
-  font-weight: 600;
+.banner .layer.scenery::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(transparent));
+  background: linear-gradient(to top, #000000, transparent);
+  z-index: 2;
 }
 
-@media (max-width: 1200px) {
-  .banner p {
-    font-size: 32px;
-  }
-}
-
-@media (max-width: 768px) {
-  .banner p {
-    font-size: 22px;
-  }
+.banner .layer.photo {
+  background-position: center;
+  background-image: url(../img/itinerary/itinerary-banner-layer2-photo.png);
 }
 
 @media (max-width: 576px) {
   .banner {
-    background-image: url(../img/itinerary/itinerary-banner-576.png);
     height: 89.06vw;
-  }
-  .banner p {
-    font-size: 18px;
   }
 }
 
 /*以下為相關行程區 CSS*/
 .itinerary {
-  margin: 160px 0;
+  margin-top: 6rem;
 }
 
-.itinerary .slogan {
-  font-size: 42px;
-  border: 3px solid;
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
-  text-orientation: upright;
-  padding: 40px 10px;
-  position: relative;
+.itinerary .country {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
-.itinerary .slogan::before {
-  content: '';
-  position: absolute;
-  width: 42px;
-  height: 42px;
-  top: -21px;
-  left: -21px;
-  background-color: #00ff00;
-  border-radius: 50%;
-  -webkit-box-shadow: 10px 21px 0 0 #00ffff;
-          box-shadow: 10px 21px 0 0 #00ffff;
+.itinerary .country h2 {
+  font-size: 5.766rem;
+  color: #00ff66;
 }
 
-.itinerary .itinerary-image h1 {
-  font-size: 47.25px;
+.itinerary .country h2 span {
+  font-size: 2.766rem;
+}
+
+.itinerary .itinerary-body h2 {
+  font-size: 2.766rem;
   color: #00ffff;
 }
 
-.itinerary .body {
-  margin-top: 80px;
-  position: relative;
-}
-
-.itinerary .body .title {
-  position: relative;
-}
-
-.itinerary .body .title .dut {
-  position: absolute;
-  top: 50%;
-  left: -40px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: #00ff00;
-}
-
-.itinerary .body .title .dut::before {
-  content: '';
-  position: absolute;
-  -webkit-transform: translate(-50%, -40%);
-          transform: translate(-50%, -40%);
-  width: 64px;
-  height: 64px;
-  background-size: cover;
-  background-position: center;
-  background-image: url(../img/title-icon.svg);
-  z-index: -1;
-}
-
-.itinerary .body .title h2 {
-  font-size: 42px;
+.itinerary .itinerary-body h3 {
+  font-size: 1.875rem;
   color: #00ffff;
 }
 
-.itinerary .body h3 {
-  font-size: 30px;
-  color: #00ffff;
+.itinerary .itinerary-body p {
+  font-size: 1.5rem;
 }
 
-.itinerary .body a, .itinerary .body p {
-  font-size: 24px;
-  letter-spacing: 2px;
+.itinerary .itinerary-body p a {
   text-decoration: none;
-  color: #ffffffd8;
+  color: #ffffff;
 }
 
-.itinerary .body a:hover {
-  color: #00ffff;
+.itinerary .itinerary-body p a:hover {
+  color: #00ff66;
+}
+
+@media (max-width: 1400px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 992px) {
-  .itinerary {
-    margin-top: 140px;
+  .itinerary .country h2 {
+    font-size: 4.766rem;
   }
-  .itinerary .slogan {
-    font-size: 32px;
-    padding: 30px 8px;
-    border: 2px solid;
-  }
-  .itinerary .slogan::before {
-    width: 32px;
-    height: 32px;
-    top: -16px;
-    left: -16px;
-    -webkit-box-shadow: 8px 16px 0 0 #00ffff;
-            box-shadow: 8px 16px 0 0 #00ffff;
-  }
-  .itinerary .itinerary-image h1 {
-    font-size: 37.25px;
-  }
-  .itinerary .body {
-    margin-top: 80px;
-  }
-  .itinerary .body .title .dut {
-    left: -30px;
-    width: 12px;
-    height: 12px;
-  }
-  .itinerary .body .title .dut::before {
-    width: 45px;
-    height: 45px;
-  }
-  .itinerary .body .title h2 {
-    font-size: 32px;
-  }
-  .itinerary .body h3 {
-    font-size: 28px;
-  }
-  .itinerary .body p {
-    font-size: 24px;
-    letter-spacing: 1px;
-  }
-}
-
-@media (max-width: 768px) {
-  .itinerary {
-    margin-top: 120px;
-  }
-  .itinerary .slogan {
-    font-size: 24px;
-    padding: 20px 5px;
-    border: 2px solid;
-  }
-  .itinerary .slogan::before {
-    width: 24px;
-    height: 24px;
-    top: -12px;
-    left: -12px;
-    -webkit-box-shadow: 6px 12px 0 0 #00ffff;
-            box-shadow: 6px 12px 0 0 #00ffff;
-  }
-  .itinerary .itinerary-image h1 {
-    font-size: 27.25px;
-  }
-  .itinerary .body {
-    margin-top: 80px;
-  }
-  .itinerary .body .title .dut {
-    left: -30px;
-    width: 12px;
-    height: 12px;
-  }
-  .itinerary .body .title .dut::before {
-    width: 45px;
-    height: 45px;
-  }
-  .itinerary .body .title h2 {
-    font-size: 24px;
-  }
-  .itinerary .body h3 {
-    font-size: 22px;
-  }
-  .itinerary .body p {
-    font-size: 20px;
-    letter-spacing: 2px;
+  .itinerary .country h2 span {
+    font-size: 2.286rem;
   }
 }
 
 @media (max-width: 576px) {
-  .itinerary {
-    margin-top: 80px;
+  .new-container {
+    padding: 0 8%;
   }
-  .itinerary .slogan {
-    font-size: 20px;
-    padding: 20px 2px;
-    border: 1px solid;
+  .itinerary .country h2 {
+    font-size: 3.766rem;
   }
-  .itinerary .slogan::before {
-    width: 20px;
-    height: 20px;
-    top: -10px;
-    left: -10px;
-    -webkit-box-shadow: 4px 10px 0 0 #00ffff;
-            box-shadow: 4px 10px 0 0 #00ffff;
+  .itinerary .country h2 span {
+    font-size: 1.806rem;
+  }
+  .itinerary .itinerary-body h2 {
+    font-size: 2.3rem;
+  }
+  .itinerary .itinerary-body h3 {
+    font-size: 1.7rem;
+  }
+  .itinerary .itinerary-body p {
+    font-size: 1.5rem;
   }
 }
 
 /*以上為相關行程區 CSS*/
-/*以下為其他相關行程區 CSS*/
+/*以下為相關行程區 CSS*/
 .other-itinerary {
-  margin-top: 160px;
+  margin-top: 6rem;
   padding: 45px 0;
   background-color: #262626;
 }
 
 .other-itinerary h2 {
-  font-size: 47.25px;
+  font-size: 2.95rem;
   color: #00ffff;
 }
 
@@ -257,7 +159,7 @@
 }
 
 .other-itinerary .swiper-container .swiper .swiper-slide {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .other-itinerary .swiper-container .swiper .swiper-slide .itinerary-card {
@@ -278,14 +180,14 @@
 }
 
 .other-itinerary .swiper-container .swiper .swiper-slide .itinerary-card .content h4 {
-  font-size: 26.25px;
+  font-size: 1.64rem;
   color: #00ffff;
   font-weight: 600;
 }
 
 .other-itinerary .swiper-container .swiper .swiper-slide .itinerary-card .content p {
   width: 100%;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #ffffffd8;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -294,22 +196,20 @@
   -webkit-line-clamp: 3;
 }
 
-.other-itinerary .swiper-container .swiper-button-prev {
+.other-itinerary .swiper-container .swiper-button-prev, .other-itinerary .swiper-container .swiper-button-next {
   position: absolute;
   top: 50%;
-  left: -5vw;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   color: #FFFFFF;
 }
 
+.other-itinerary .swiper-container .swiper-button-prev {
+  left: -4vw;
+}
+
 .other-itinerary .swiper-container .swiper-button-next {
-  position: absolute;
-  top: 50%;
-  right: -5vw;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  color: #FFFFFF;
+  right: -4vw;
 }
 
 .other-itinerary .swiper-container .swiper-pagination {
@@ -321,129 +221,23 @@
   background-color: #FFFFFF;
 }
 
-@media (max-width: 992px) {
-  .other-itinerary {
-    margin-top: 140px;
-    padding: 45px 0;
-  }
-  .other-itinerary h2 {
-    font-size: 37.25px;
-  }
-  .other-itinerary .swiper {
-    margin-bottom: 40px;
-  }
-}
-
 @media (max-width: 768px) {
-  .other-itinerary {
-    margin-top: 120px;
+  .other-itinerary .swiper-container .swiper .swiper-slide .itinerary-card .content h4 {
+    font-size: 1.64rem;
+  }
+  .other-itinerary .swiper-container .swiper .swiper-slide .itinerary-card .content p {
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 576px) {
-  .other-itinerary {
-    margin-top: 80px;
-  }
-  .other-itinerary h2 {
-    text-align: center;
-  }
   .other-itinerary .swiper-container .swiper-button-prev {
-    left: 0vw;
+    left: 0;
   }
   .other-itinerary .swiper-container .swiper-button-next {
-    right: 0vw;
-  }
-}
-
-/*以上為其他相關行程區 CSS*/
-.aurora {
-  position: relative;
-}
-
-.aurora::before {
-  content: '';
-  position: absolute;
-  top: -20%;
-  right: 0;
-  width: 50%;
-  height: 60vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../img/極光裝飾線條-右邊.svg);
-  z-index: -2;
-}
-
-.aurora::after {
-  content: '';
-  position: absolute;
-  bottom: -20%;
-  left: -25%;
-  width: 80%;
-  height: 60vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
-  background-image: url(../img/極光裝飾線條-左邊.svg);
-  z-index: -2;
-}
-
-@media (max-width: 1200px) {
-  .aurora::before {
-    top: -20%;
     right: 0;
-    width: 50%;
-    height: 70vw;
-  }
-  .aurora::after {
-    bottom: 0;
-    left: -10%;
-    width: 80%;
-    height: 100vw;
   }
 }
 
-@media (max-width: 992px) {
-  .aurora::before {
-    top: -20%;
-    right: 0;
-    width: 50%;
-    height: 70vw;
-  }
-  .aurora::after {
-    bottom: -15%;
-    left: 0;
-    width: 100%;
-    height: 150vw;
-  }
-}
-
-@media (max-width: 768px) {
-  .aurora::before {
-    top: -10%;
-    right: 0;
-    width: 50%;
-    height: 70vw;
-  }
-  .aurora::after {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 200vw;
-  }
-}
-
-@media (max-width: 576px) {
-  .aurora::before {
-    top: -10%;
-    right: 0;
-    width: 70%;
-    height: 150vw;
-  }
-  .aurora::after {
-    bottom: 0;
-    left: -15%;
-    width: 120%;
-    height: 200vw;
-  }
-}
+/*以上為相關行程簡介區 CSS*/
 /*# sourceMappingURL=itinerary.css.map */
