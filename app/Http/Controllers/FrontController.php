@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Models\Itinerary;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -14,7 +15,9 @@ class FrontController extends Controller
 
     public function itinerary()
     {
-        return view('front.itinerary.itinerary');
+        $itineraries = Itinerary::get();
+
+        return view('front.itinerary.itinerary',compact('itineraries'));
     }
 
     public function contact(Request $request)

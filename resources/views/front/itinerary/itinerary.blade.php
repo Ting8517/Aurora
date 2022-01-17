@@ -5,6 +5,12 @@
     <link rel="stylesheet" href="{{asset('/css/layout.css')}}">
     <!-- itinerary Core CSS -->
     <link rel="stylesheet" href="{{asset('css/itinerary.css')}}">
+
+    <style>
+        #images {  
+            height: 300px;
+        }
+    </style>
 @endsection
 
 @section('main')
@@ -59,78 +65,19 @@
                     <div class="swiper-container">
                         <div class="swiper itinerary-swiper pt-4">
                             <div class="swiper-wrapper">
+                                @foreach ($itineraries as $itinerary)
                                 <div class="swiper-slide">
-                                    <a class="itinerary-card" href="#">
+                                    <a class="itinerary-card" href="{{route('front.itinerary.content',['id' => $itinerary->id])}}">
                                         <div class="content">
-                                            <img src="https://fakeimg.pl/359x307/" alt="">
+                                            <img id="images" src="{{Storage::url($itinerary->image_url)}}" alt="">
                                             <div class="p-3">
-                                                <h4 class="mt-2">藍湖溫泉</h4>
-                                                <p>藍湖 blue lagoon那是一個黑色的火山岩中環抱著的一汪如同藍寶石的熱泉，常天維持在37～39°C，四周的泥地是白色的。由於水質和池邊土壤都富含稀有的礦物，這個溫泉不但美如仙境，更被視為回復青春，保持美麗的聖泉。</p>
+                                                <h4 class="mt-2">{{$itinerary->title}}</h4>
+                                                <p id="content">{!!$itinerary->content!!}</p>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="swiper-slide">
-                                    <a class="itinerary-card" href="#">
-                                        <div class="content">
-                                            <img src="https://fakeimg.pl/359x307/" alt="">
-                                            <div class="p-3">
-                                                <h4 class="mt-2">藍湖溫泉</h4>
-                                                <p>藍湖 blue lagoon那是一個黑色的火山岩中環抱著的一汪如同藍寶石的熱泉，常天維持在37～39°C，四周的泥地是白色的。由於水質和池邊土壤都富含稀有的礦物，這個溫泉不但美如仙境，更被視為回復青春，保持美麗的聖泉。</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div><div class="swiper-slide">
-                                    <a class="itinerary-card" href="#">
-                                        <div class="content">
-                                            <img src="https://fakeimg.pl/359x307/" alt="">
-                                            <div class="p-3">
-                                                <h4 class="mt-2">藍湖溫泉</h4>
-                                                <p>藍湖 blue lagoon那是一個黑色的火山岩中環抱著的一汪如同藍寶石的熱泉，常天維持在37～39°C，四周的泥地是白色的。由於水質和池邊土壤都富含稀有的礦物，這個溫泉不但美如仙境，更被視為回復青春，保持美麗的聖泉。</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div><div class="swiper-slide">
-                                    <a class="itinerary-card" href="#">
-                                        <div class="content">
-                                            <img src="https://fakeimg.pl/359x307/" alt="">
-                                            <div class="p-3">
-                                                <h4 class="mt-2">藍湖溫泉</h4>
-                                                <p>藍湖 blue lagoon那是一個黑色的火山岩中環抱著的一汪如同藍寶石的熱泉，常天維持在37～39°C，四周的泥地是白色的。由於水質和池邊土壤都富含稀有的礦物，這個溫泉不但美如仙境，更被視為回復青春，保持美麗的聖泉。</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div><div class="swiper-slide">
-                                    <a class="itinerary-card" href="#">
-                                        <div class="content">
-                                            <img src="https://fakeimg.pl/359x307/" alt="">
-                                            <div class="p-3">
-                                                <h4 class="mt-2">藍湖溫泉</h4>
-                                                <p>藍湖 blue lagoon那是一個黑色的火山岩中環抱著的一汪如同藍寶石的熱泉，常天維持在37～39°C，四周的泥地是白色的。由於水質和池邊土壤都富含稀有的礦物，這個溫泉不但美如仙境，更被視為回復青春，保持美麗的聖泉。</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div><div class="swiper-slide">
-                                    <a class="itinerary-card" href="#">
-                                        <div class="content">
-                                            <img src="https://fakeimg.pl/359x307/" alt="">
-                                            <div class="p-3">
-                                                <h4 class="mt-2">藍湖溫泉</h4>
-                                                <p>藍湖 blue lagoon那是一個黑色的火山岩中環抱著的一汪如同藍寶石的熱泉，常天維持在37～39°C，四周的泥地是白色的。由於水質和池邊土壤都富含稀有的礦物，這個溫泉不但美如仙境，更被視為回復青春，保持美麗的聖泉。</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div><div class="swiper-slide">
-                                    <a class="itinerary-card" href="#">
-                                        <div class="content">
-                                            <img src="https://fakeimg.pl/359x307/" alt="">
-                                            <div class="p-3">
-                                                <h4 class="mt-2">藍湖溫泉</h4>
-                                                <p>藍湖 blue lagoon那是一個黑色的火山岩中環抱著的一汪如同藍寶石的熱泉，常天維持在37～39°C，四周的泥地是白色的。由於水質和池邊土壤都富含稀有的礦物，這個溫泉不但美如仙境，更被視為回復青春，保持美麗的聖泉。</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                         <div class="swiper-button-prev"></div>

@@ -17,7 +17,11 @@ use App\Http\Controllers\ItineraryController;
 */
 //前台
 Route::get('/',[FrontController::class,'index'])->name('front.index');
-Route::get('/itinerary',[FrontController::class,'itinerary'])->name('front.itinerary');
+//相關行程
+Route::prefix('/itinerary')->group(function (){
+    Route::get('/',[FrontController::class,'itinerary'])->name('front.itinerary');
+    Route::get('/{id}',[FrontController::class, 'itineraryContent'])->name('front.itinerary.content');
+});
 Route::get('/QA',[FrontController::class,'QA'])->name('front.QA');
 
 Auth::routes();

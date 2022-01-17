@@ -23,7 +23,7 @@
     <header>
         <nav class="navbar navbar-expand-lg mt-4">
             <div class="container">
-                <a class="navbar-brand" href="./index.html">
+                <a class="navbar-brand" href="{{route('front.index')}}">
                     <img src="./img/logo.svg" width="106" alt="Aurora" title="Aurora">
                 </a>
                 <button class="navbar-toggler pe-0" type="button" data-bs-toggle="collapse"
@@ -42,7 +42,7 @@
                                     data-hover="HOTSPOT">極光熱點</span></a>
                         </li>
                         <li class="nav-item me-lg-3 d-flex justify-content-end">
-                            <a class="nav-link d-flex justify-content-end" href="./itinerary.html#other-itinerary"><span
+                            <a class="nav-link d-flex justify-content-end" href="{{route('front.itinerary')}}"><span
                                     data-hover="ITINERART">相關行程</span></a>
                         </li>
                         <li class="nav-item me-lg-3 d-flex justify-content-end">
@@ -50,7 +50,7 @@
                                     data-hover="PREPARE">行前準備</span></a>
                         </li>
                         <li class="nav-item me-lg-3 d-flex justify-content-end">
-                            <a class="nav-link d-flex justify-content-end" href="./q&a.html"><span
+                            <a class="nav-link d-flex justify-content-end" href="{{route('front.QA')}}"><span
                                     data-hover="Q&A">常見問題</span></a>
                         </li>
                         <li class="nav-item  d-flex justify-content-end">
