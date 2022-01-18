@@ -1,9 +1,13 @@
 <?php
 
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ContinentController;
+use App\Http\Controllers\CountryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ItineraryController;
+use App\Models\Country;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,32 +19,48 @@ use App\Http\Controllers\ItineraryController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 //前台
-Route::get('/',[FrontController::class,'index'])->name('front.index');
+Route::get('/',[FrontController::class,'index'])->name('index');
+//極光熱點
+Route::get('/hotspot',[FrontController::class,'hotspotList'])->name('hotspots.list');
 //相關行程
-Route::prefix('/itinerary')->group(function (){
-    Route::get('/',[FrontController::class,'itinerary'])->name('front.itinerary');
-    Route::get('/{id}',[FrontController::class, 'itineraryContent'])->name('front.itinerary.content');
-});
-Route::get('/QA',[FrontController::class,'QA'])->name('front.QA');
+Route::get('/itinerary/{id}', [FrontController::class,'itineraryContent'])->name('itineraries.content');
+//行前準備
+Route::get('/prepare',[FrontController::class,'prepareList'])->name('prepare.list');
+//常見問題
+Route::get('/qa',[FrontController::class,'qaList'])->name('qa.list');
+//聯絡我們，使用者用
+Route::post('/',[ContactController::class,'store'])->name('contact.store');
+
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class,'index'])->name('home');
+//後台登入首頁
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-//後台
-Route::prefix('/admin')->group(function (){
-    //相關行程
-    Route::prefix('/itinerary')->group(function (){
-        //後臺列表頁
-        Route::get('/',[ItineraryController::class,'index'])->name('itinerary.index');
-        Route::get('/create',[ItineraryController::class,'create'])->name('itinerary.create');
-        Route::post('/',[ItineraryController::class,'store'])->name('itinerary.store');
-        Route::get('/{id}/edit',[ItineraryController::class,'edit'])->name('itinerary.edit');
-        Route::patch('/{id}',[ItineraryController::class,'update'])->name('itinerary.update');
-        Route::delete('/{id}',[ItineraryController::class,'destroy'])->name('itinerary.destroy');
+//後台                      判斷有沒有登入
+Route::prefix('admin')->middleware(['auth'])->group(function(){
+
+    Route::resources([
+        //洲管理
+        'continent' =>ContinentController::class,
+        //國家管理
+        'country' => CountryController::class,
+        //相關行程管理
+        'itinerary' => ItineraryController::class,
+    ]);
+
+    //聯絡我們
+    Route::prefix('/contact')->group(function(){
+        Route::get('/',[ContactController::class,'index'])->name('contact.index');
+        Route::patch('/{id}',[ContactController::class,'update'])->name('contact.update');
+        Route::delete('/{id}',[ContactController::class,'destroy'])->name('contact.destroy');   
     });
+
 });
 
-//聯絡我們
-Route::post('/contact',[FrontController::class,'contact']);
+// Route::get('/home', [App\Http\Controllers\HomeController::class,'index'])->name('home');
+
+
+

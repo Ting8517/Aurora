@@ -9,8 +9,11 @@ class Itinerary extends Model
 {
     use HasFactory;
 
-    protected $table = 'itineraries';
+    protected $table = 'itineraries'; 
+    protected $fillable = ['country_id', 'place_chinese_name', 'place_english_name', 'introduce', 'information', 'image_url'];
 
-    protected $fillable = ['title','content','image_url'];
+    public function country(){
+        return $this->belongsTo(Country::class, 'country_id', 'id');
+    }
 
 }

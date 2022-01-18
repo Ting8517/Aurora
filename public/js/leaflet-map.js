@@ -28,12 +28,17 @@ const map = L.map('map', {
     attributionControl: false, // 是否秀出「leaflet」的貢獻標記
     zoomControl: false, // 是否秀出 - + 按鈕
 });
+
 L.tileLayer('https://cartocdn_{s}.global.ssl.fastly.net/base-midnight/{z}/{x}/{y}.png').addTo(map);
 let marker = {};
 marker = L.marker(locations['冰島']['coordinate'], {   //加入標記
     title: '',
     opacity: 1.0
 }).addTo(map).bindPopup(`<b style="font-size:20px;">${locations['冰島']['locationName']}</b><br>`).openPopup();
+
+//初始
+setDispalyItineraries('冰島');
+
 locationElements.forEach(function (locationElement) {
     locationElement.addEventListener('click', function () {
         let centerName = locationElement.getAttribute('data-tag');
@@ -56,5 +61,24 @@ locationElements.forEach(function (locationElement) {
         location.classList.remove('d-none');
         location.classList.add('active');
 
+        setDispalyItineraries(centerName);
     });
 });
+
+//其他相關行程顯示設定
+function setDispalyItineraries(selectCountry){
+    console.log(selectCountry);
+    let  swiperItineraries = document.querySelectorAll('.swiper-slide');
+    swiperItineraries.forEach(function(swiperItinerary){
+        let country = swiperItinerary.getAttribute('data-country');
+        //相關行程的國家為選擇的國家時avtive
+        if(country == selectCountry){
+            swiperItinerary.classList.remove('d-none');
+            swiperItinerary.classList.add('avtive');
+        }
+        else{   //相關行程的國家不是選擇的國家時d-none
+            swiperItinerary.classList.add('d-none');
+            swiperItinerary.classList.remove('avtive');
+        }
+    });
+}
