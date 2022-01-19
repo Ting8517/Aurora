@@ -5,7 +5,7 @@
     <style>
         th,td {
             text-align: center;
-            vertical-align: middle;
+            vertical-align: middle !important;
         }
     </style>
 @endsection

@@ -41,7 +41,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 //後台                      判斷有沒有登入
 Route::prefix('admin')->middleware(['auth'])->group(function(){
-
+    
     Route::resources([
         //洲管理
         'continent' =>ContinentController::class,

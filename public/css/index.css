@@ -84,10 +84,6 @@
 
 /*以上為Banner-1區 CSS*/
 /*以下為文字區塊說區 CSS*/
-.text-block {
-  margin-top: 100px;
-}
-
 .text-block h1 {
   font-size: 63.75px;
   color: #00ff66;
@@ -107,9 +103,6 @@
 }
 
 @media (max-width: 992px) {
-  .text-block {
-    margin-top: 80px;
-  }
   .text-block h1 {
     font-size: 53.75px;
   }
@@ -126,7 +119,7 @@
 
 @media (max-width: 768px) {
   .text-block {
-    margin-top: 80px;
+    margin-top: 50px;
   }
   .text-block .set-up {
     margin-top: 0;

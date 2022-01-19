@@ -508,7 +508,8 @@
 @section('js')
      <!-- leaflet Core JS -->
      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
+    <!-- jquery Core JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
      <!-- 此專題的 Leaflet JS -->
     <script src="{{asset('js/leaflet-map.js')}}"></script>
     <!-- 此專題的 極光熱點選單 JS -->

@@ -5,7 +5,7 @@
     <style>
         th,td {
             text-align: center;
-            vertical-align: middle;
+            vertical-align: middle !important;
         }
     </style>
 @endsection
@@ -61,7 +61,7 @@
 @endsection
 
 @section('js')
-<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script>
         
         //初始化datatable

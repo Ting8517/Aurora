@@ -9,7 +9,7 @@
     <div class="container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{asset('admin')}}">首頁</a></li>
+                <li class="breadcrumb-item"><a href="{{route('home')}}">首頁</a></li>
                 <li class="breadcrumb-item"><a href="{{route('continent.index')}}">洲管理</a></li>
                 <li class="breadcrumb-item active" aria-current="page">新增洲</li>
             </ol>
@@ -23,8 +23,8 @@
                         <form method="POST" action="{{route('continent.store')}}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group row py-2">
-                                <label for="name" class="col-sm-2 col-form-label">洲名稱<span class="text-danger">*</span></label>
-                                <div class="col-sm-10">
+                                <label for="name" class="col-sm-1 col-form-label">洲名稱<span class="text-danger">*</span></label>
+                                <div class="col-sm-11">
                                     <input type="text" class="form-control" id="name" name="name" required>
                                 </div>
                             </div>

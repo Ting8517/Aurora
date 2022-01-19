@@ -8,7 +8,7 @@
 <div class="container">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{asset('admin')}}">首頁</a></li>
+            <li class="breadcrumb-item"><a href="{{route('home')}}">首頁</a></li>
             <li class="breadcrumb-item"><a href="{{route('continent.index')}}">洲管理</a></li>
             <li class="breadcrumb-item active" aria-current="page">編輯洲</li>
         </ol>

@@ -29,27 +29,65 @@ const map = L.map('map', {
     zoomControl: false, // 是否秀出 - + 按鈕
 });
 
+
+// const markerIcon = L.icon({  //自訂marker
+//     iconUrl: '/js/map-json/icon.gif',
+//     iconSize: [50, 50], // size of the icon
+//     iconAnchor: [22, 50], // point of the icon which will correspond to marker's location
+//     popupAnchor: [0, -50] // point from which the popup should open relative to the iconAnchor
+// });
+
 L.tileLayer('https://cartocdn_{s}.global.ssl.fastly.net/base-midnight/{z}/{x}/{y}.png').addTo(map);
+
+let country = {};
+let myGeoJSONPath = "/js/map-json/冰島.json";   //給被選擇的國家圖層
+let myCustomStyle = {    //圖層樣式
+        stroke: false,
+        fill: true,
+        fillColor: '#00ff66',
+        fillOpacity: 1
+    }
+$.getJSON(myGeoJSONPath, function (data) {  //將圖層加入地圖
+    country = L.geoJson(data, {
+        clickable: false,
+        style: myCustomStyle,
+        // color: '#999',
+    }).addTo(map);
+})
+
 let marker = {};
 marker = L.marker(locations['冰島']['coordinate'], {   //加入標記
     title: '',
-    opacity: 1.0
+    opacity: 1.0,
+    // icon: markerIcon,
 }).addTo(map).bindPopup(`<b style="font-size:20px;">${locations['冰島']['locationName']}</b><br>`).openPopup();
 
-//初始
+
+//初始其他相關行程
 setDispalyItineraries('冰島');
 
 locationElements.forEach(function (locationElement) {
     locationElement.addEventListener('click', function () {
         let centerName = locationElement.getAttribute('data-tag');
-        //刪除已出現的標記
-        if (marker) {
-            map.removeLayer(marker);
-        }
+
+         //移除上一次加進去的國家圖層
+        map.removeLayer(country); 
+        myGeoJSONPath = `/js/map-json/${centerName}.json`;   //給被選擇的國家圖層
+        $.getJSON(myGeoJSONPath, function (data) {  //將圖層加入地圖
+            country = L.geoJson(data, {
+                clickable: false,
+                style: myCustomStyle,
+                color: '#999',
+            }).addTo(map);
+        })
+        
+        //刪除上一次加進去的標記
+        map.removeLayer(marker);
         map.flyTo(locations[centerName]['coordinate']);   //飛到此地
         marker = L.marker(locations[centerName]['coordinate'], {   //加入標記
             title: '',
-            opacity: 1.0
+            opacity: 1.0,
+            // icon: markerIcon,
         }).addTo(map).bindPopup(`<b style="font-size:20px;">${locations[centerName]['locationName']}</b><br>`).openPopup();
 
         //移除上一次顯示的國家
@@ -67,7 +105,6 @@ locationElements.forEach(function (locationElement) {
 
 //其他相關行程顯示設定
 function setDispalyItineraries(selectCountry){
-    console.log(selectCountry);
     let  swiperItineraries = document.querySelectorAll('.swiper-slide');
     swiperItineraries.forEach(function(swiperItinerary){
         let country = swiperItinerary.getAttribute('data-country');
