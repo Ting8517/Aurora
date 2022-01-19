@@ -86,7 +86,7 @@
     <!-- 底部按鈕區 -->
     <section >
         <div class="d-flex justify-content-center nxet-page">
-            <a class="next-btn" href="{{route('itineraries.content')}}">
+            <a class="next-btn" href="{{route('prepare.list')}}">
                 <span></span>
                 <span></span>
                 <span></span>
