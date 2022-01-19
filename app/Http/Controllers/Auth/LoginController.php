@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -36,5 +37,12 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+    //因為上傳雲端 vendor裡東西都不會上傳
+    //所以修改放在vendor裡的AuthenticatesUsers的函式沒有用  
+    //去AuthenticatesUsers找到此函示拉到這裡就可以用了
+    protected function loggedOut(Request $request)
+    {
+        return redirect('/home');
     }
 }
