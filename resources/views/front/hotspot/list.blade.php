@@ -21,8 +21,13 @@
             <div id="map"></div>
         </div>
         <!-- 極光熱點選單 -->
+        <div class="tip">
+            選擇熱點
+            <span>
+                <i class="fas fa-hand-point-down"></i>
+            </span>
+        </div>
         <div class="hotspot-list">
-            <!-- <span class="col-5 ms-auto">極光熱點</span> -->
             <ul class="location-menu">
                 <li class="location-li">       
                     <a class="location" href="#{{--route('hotspot.hotspot','country_name=冰島')--}}" data-tag="冰島">冰島 雷克雅維克</a>
@@ -1029,7 +1034,7 @@
     <script src="{{asset('js/itinerary-swiper.js')}}"></script>
     <!-- 此專題的 極光熱點選單 JS -->
     <script src="{{asset('js/hotspot-list.js')}}"></script>
-    <!-- 此專題的其他資訊按鈕 JS -->
+    <!-- 此專題的小資訊按鈕 JS -->
     <script>
         const infoItemElements = document.querySelectorAll('.info-item');
         

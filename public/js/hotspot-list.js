@@ -1,6 +1,7 @@
 //地點按鈕
 const locationBtns = document.querySelectorAll('.location-btn');
 const locationALinks = document.querySelectorAll('.location');
+const tipElement = document.querySelector('.tip');
 
 locationBtns.forEach(function(locationBtn){
     locationBtn.addEventListener('mouseenter',function(){   //偵測到hover時
@@ -22,6 +23,11 @@ locationALinks.forEach(function(locationALink){
     });
     locationALink.addEventListener('mouseleave',function(){
         setDispaly(this,'mouseleave');
+    });
+    locationALink.addEventListener('click',function(){
+        if(tipElement){
+            tipElement.classList.add('d-none');
+        }
     });
 });
 

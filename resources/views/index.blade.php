@@ -27,32 +27,32 @@
     <section >
         <div class="container">
             <div class="text-block">
-                <div class="col-12 col-md-7" data-aos="fade-up-right">
+                <div class="col-12 col-md-7" >
                     <h1>Etymology</h1>
                     <h2 class="pt-2">極光傳說</h2>
                     <p class="pt-1">極光(aurora)，是古羅馬神話里的黎明女神，同時也象徵黑夜轉為白天的那第一道光芒。</p>
                 </div>
-                <div class="col-12 col-md-9 ms-auto"  data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <div class="col-12 col-md-9 ms-auto" data-aos="fade-left" data-aos-duration="2000">
                     <img class="w-100 py-2" src="./img/index/黎明女神.jpg" alt="">
                 </div>
-                <div class="col-12 mt-5 d-md-none"  data-aos="fade-up-left">
+                <div class="col-12 mt-5 d-md-none">
                     <p class="col-12 col-md-8 ms-auto">中世紀早期，不少人相信極光是騎馬 奔馳越過天空的勇士。</p>
                 </div>
                 <div class="row mt-5">
-                    <div class="col-12 col-md-7"  data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                    <div class="col-12 col-md-7"  data-aos="fade-right" data-aos-duration="2000">
                         <img class="w-100" src="./img/index/index-02.png" alt="">
                     </div>
-                    <div class="col-12 col-md-5 mt-5 d-none d-md-block"  data-aos="fade-up-left">
+                    <div class="col-12 col-md-5 mt-5 d-none d-md-block">
                         <p class="col-12 col-md-8 ms-auto">中世紀早期，不少人相信極光是騎馬 奔馳越過天空的勇士。</p>
                     </div>
                 </div>
-                <div class="col-12 mt-5 d-md-none" data-aos="fade-up-right">
+                <div class="col-12 mt-5 d-md-none">
                     <p>在北極地區，因紐特人認為，極光是神靈在為最近死去之人照亮歸天之路。</p>
                 </div>
-                <div class="col-12 col-md-7 ms-auto set-up"  data-aos="fade-up" ata-aos-anchor-placement="top-bottom">
+                <div class="col-12 col-md-7 ms-auto set-up"  data-aos="fade-up" data-aos-duration="2000">
                     <img class="w-100" src="./img/index/index-03.jpg" alt="">
                 </div>
-                <div class="col-12 col-md-6 mt-5 d-none d-md-block" data-aos="fade-up-right">
+                <div class="col-12 col-md-6 mt-5 d-none d-md-block" >
                     <p>在北極地區，因紐特人認為，極光是神靈在為最近死去之人照亮歸天之路。</p>
                 </div>
             </div>
@@ -79,15 +79,15 @@
     <section >
         <div class="container ">
             <div class="text-block">
-                <div class="col-12 col-md-8 mt-5" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <div class="col-12 col-md-8 mt-5">
                     <h1>Occurrence</h1>
                     <h2>極光如何形成</h2>
                     <p>「極光」是太陽發出的高速帶電粒子，或稱太陽風，來到地球表面時，在極區上空與大氣層的粒子產生交互碰撞作用，釋放出能量後所產生的發光現象。</p>
                 </div>
             </div>
-            <div class="row d-flex justify-content-center justify-md-content-between "  data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                <div class="mt-3 mt-md-auto factor-image1"></div>
-                <div class="mt-5 mx-auto mt-md-0 factor-image2"></div>
+            <div class="row d-flex justify-content-center justify-md-content-between " >
+                <div class="mt-3 mt-md-auto factor-image1" data-aos="fade-up" data-aos-duration="2000"></div>
+                <div class="mt-5 mx-auto mt-md-0 factor-image2" data-aos="fade-up"  data-aos-duration="2000"  data-aos-delay="500"></div>
             </div>
         </div>
     </section>
