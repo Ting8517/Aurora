@@ -195,6 +195,10 @@
   -webkit-line-clamp: 3;
 }
 
+.other-itinerary .swiper-container .swiper .swiper-slide .itinerary-card .content .itinerary-introduce p {
+  margin-bottom: 0;
+}
+
 .other-itinerary .swiper-container .swiper-button-prev, .other-itinerary .swiper-container .swiper-button-next {
   position: absolute;
   top: 50%;

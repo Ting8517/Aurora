@@ -290,7 +290,7 @@
         <div class="contact">
             <div class="new-container">
                 <div class="page-title">
-                    <span>CONTENT</span>
+                    <span>CONTACT</span>
                     <h1>聯絡我們</h1>
                 </div>
                 <form  method="POST" action="{{route('contact.store')}}" class="mt-5">

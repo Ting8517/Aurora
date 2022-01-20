@@ -204,8 +204,8 @@
           animation-name: float-1;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  -webkit-animation-duration: 7.93719s;
-          animation-duration: 7.93719s;
+  -webkit-animation-duration: 5.4345s;
+          animation-duration: 5.4345s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -215,8 +215,8 @@
           animation-name: float-2;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  -webkit-animation-duration: 5.69006s;
-          animation-duration: 5.69006s;
+  -webkit-animation-duration: 5.78348s;
+          animation-duration: 5.78348s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -226,8 +226,8 @@
           animation-name: float-3;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  -webkit-animation-duration: 7.29159s;
-          animation-duration: 7.29159s;
+  -webkit-animation-duration: 7.78452s;
+          animation-duration: 7.78452s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -237,8 +237,8 @@
           animation-name: float-4;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  -webkit-animation-duration: 7.45953s;
-          animation-duration: 7.45953s;
+  -webkit-animation-duration: 6.78402s;
+          animation-duration: 6.78402s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -248,8 +248,8 @@
           animation-name: float-5;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  -webkit-animation-duration: 5.02335s;
-          animation-duration: 5.02335s;
+  -webkit-animation-duration: 7.36113s;
+          animation-duration: 7.36113s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -259,8 +259,8 @@
           animation-name: float-6;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  -webkit-animation-duration: 7.979s;
-          animation-duration: 7.979s;
+  -webkit-animation-duration: 5.70702s;
+          animation-duration: 5.70702s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -271,12 +271,12 @@
             transform: rotateX(0);
   }
   50% {
-    -webkit-transform: rotateZ(-1.61818deg) translateY(14.97022px);
-            transform: rotateZ(-1.61818deg) translateY(14.97022px);
+    -webkit-transform: rotateZ(-1.11674deg) translateY(15.05219px);
+            transform: rotateZ(-1.11674deg) translateY(15.05219px);
   }
   100% {
-    -webkit-transform: rotateZ(1.10632deg) translateY(-14.98102px);
-            transform: rotateZ(1.10632deg) translateY(-14.98102px);
+    -webkit-transform: rotateZ(1.72783deg) translateY(-13.04535px);
+            transform: rotateZ(1.72783deg) translateY(-13.04535px);
   }
 }
 
@@ -286,12 +286,12 @@
             transform: rotateX(0);
   }
   50% {
-    -webkit-transform: rotateZ(-1.61818deg) translateY(14.97022px);
-            transform: rotateZ(-1.61818deg) translateY(14.97022px);
+    -webkit-transform: rotateZ(-1.11674deg) translateY(15.05219px);
+            transform: rotateZ(-1.11674deg) translateY(15.05219px);
   }
   100% {
-    -webkit-transform: rotateZ(1.10632deg) translateY(-14.98102px);
-            transform: rotateZ(1.10632deg) translateY(-14.98102px);
+    -webkit-transform: rotateZ(1.72783deg) translateY(-13.04535px);
+            transform: rotateZ(1.72783deg) translateY(-13.04535px);
   }
 }
 
@@ -301,12 +301,12 @@
             transform: rotateX(0);
   }
   50% {
-    -webkit-transform: rotateZ(-1.38205deg) translateY(16.93222px);
-            transform: rotateZ(-1.38205deg) translateY(16.93222px);
+    -webkit-transform: rotateZ(-0.77172deg) translateY(11.12812px);
+            transform: rotateZ(-0.77172deg) translateY(11.12812px);
   }
   100% {
-    -webkit-transform: rotateZ(1.33095deg) translateY(-9.71037px);
-            transform: rotateZ(1.33095deg) translateY(-9.71037px);
+    -webkit-transform: rotateZ(0.08783deg) translateY(-13.94315px);
+            transform: rotateZ(0.08783deg) translateY(-13.94315px);
   }
 }
 
@@ -316,12 +316,12 @@
             transform: rotateX(0);
   }
   50% {
-    -webkit-transform: rotateZ(-1.38205deg) translateY(16.93222px);
-            transform: rotateZ(-1.38205deg) translateY(16.93222px);
+    -webkit-transform: rotateZ(-0.77172deg) translateY(11.12812px);
+            transform: rotateZ(-0.77172deg) translateY(11.12812px);
   }
   100% {
-    -webkit-transform: rotateZ(1.33095deg) translateY(-9.71037px);
-            transform: rotateZ(1.33095deg) translateY(-9.71037px);
+    -webkit-transform: rotateZ(0.08783deg) translateY(-13.94315px);
+            transform: rotateZ(0.08783deg) translateY(-13.94315px);
   }
 }
 
@@ -331,12 +331,12 @@
             transform: rotateX(0);
   }
   50% {
-    -webkit-transform: rotateZ(-1.40127deg) translateY(11.62898px);
-            transform: rotateZ(-1.40127deg) translateY(11.62898px);
+    -webkit-transform: rotateZ(-0.01655deg) translateY(9.57934px);
+            transform: rotateZ(-0.01655deg) translateY(9.57934px);
   }
   100% {
-    -webkit-transform: rotateZ(0.16467deg) translateY(-15.8479px);
-            transform: rotateZ(0.16467deg) translateY(-15.8479px);
+    -webkit-transform: rotateZ(1.79537deg) translateY(-10.17353px);
+            transform: rotateZ(1.79537deg) translateY(-10.17353px);
   }
 }
 
@@ -346,12 +346,12 @@
             transform: rotateX(0);
   }
   50% {
-    -webkit-transform: rotateZ(-1.40127deg) translateY(11.62898px);
-            transform: rotateZ(-1.40127deg) translateY(11.62898px);
+    -webkit-transform: rotateZ(-0.01655deg) translateY(9.57934px);
+            transform: rotateZ(-0.01655deg) translateY(9.57934px);
   }
   100% {
-    -webkit-transform: rotateZ(0.16467deg) translateY(-15.8479px);
-            transform: rotateZ(0.16467deg) translateY(-15.8479px);
+    -webkit-transform: rotateZ(1.79537deg) translateY(-10.17353px);
+            transform: rotateZ(1.79537deg) translateY(-10.17353px);
   }
 }
 
@@ -361,12 +361,12 @@
             transform: rotateX(0);
   }
   50% {
-    -webkit-transform: rotateZ(-1.41909deg) translateY(12.03182px);
-            transform: rotateZ(-1.41909deg) translateY(12.03182px);
+    -webkit-transform: rotateZ(-1.52206deg) translateY(7.79478px);
+            transform: rotateZ(-1.52206deg) translateY(7.79478px);
   }
   100% {
-    -webkit-transform: rotateZ(0.07467deg) translateY(-5.47832px);
-            transform: rotateZ(0.07467deg) translateY(-5.47832px);
+    -webkit-transform: rotateZ(0.03895deg) translateY(-13.63788px);
+            transform: rotateZ(0.03895deg) translateY(-13.63788px);
   }
 }
 
@@ -376,12 +376,12 @@
             transform: rotateX(0);
   }
   50% {
-    -webkit-transform: rotateZ(-1.41909deg) translateY(12.03182px);
-            transform: rotateZ(-1.41909deg) translateY(12.03182px);
+    -webkit-transform: rotateZ(-1.52206deg) translateY(7.79478px);
+            transform: rotateZ(-1.52206deg) translateY(7.79478px);
   }
   100% {
-    -webkit-transform: rotateZ(0.07467deg) translateY(-5.47832px);
-            transform: rotateZ(0.07467deg) translateY(-5.47832px);
+    -webkit-transform: rotateZ(0.03895deg) translateY(-13.63788px);
+            transform: rotateZ(0.03895deg) translateY(-13.63788px);
   }
 }
 
@@ -391,12 +391,12 @@
             transform: rotateX(0);
   }
   50% {
-    -webkit-transform: rotateZ(-1.50639deg) translateY(11.98296px);
-            transform: rotateZ(-1.50639deg) translateY(11.98296px);
+    -webkit-transform: rotateZ(-0.91511deg) translateY(14.47927px);
+            transform: rotateZ(-0.91511deg) translateY(14.47927px);
   }
   100% {
-    -webkit-transform: rotateZ(1.64deg) translateY(-9.58324px);
-            transform: rotateZ(1.64deg) translateY(-9.58324px);
+    -webkit-transform: rotateZ(0.93938deg) translateY(-16.71081px);
+            transform: rotateZ(0.93938deg) translateY(-16.71081px);
   }
 }
 
@@ -406,12 +406,12 @@
             transform: rotateX(0);
   }
   50% {
-    -webkit-transform: rotateZ(-1.50639deg) translateY(11.98296px);
-            transform: rotateZ(-1.50639deg) translateY(11.98296px);
+    -webkit-transform: rotateZ(-0.91511deg) translateY(14.47927px);
+            transform: rotateZ(-0.91511deg) translateY(14.47927px);
   }
   100% {
-    -webkit-transform: rotateZ(1.64deg) translateY(-9.58324px);
-            transform: rotateZ(1.64deg) translateY(-9.58324px);
+    -webkit-transform: rotateZ(0.93938deg) translateY(-16.71081px);
+            transform: rotateZ(0.93938deg) translateY(-16.71081px);
   }
 }
 
@@ -421,12 +421,12 @@
             transform: rotateX(0);
   }
   50% {
-    -webkit-transform: rotateZ(-0.3665deg) translateY(15.44318px);
-            transform: rotateZ(-0.3665deg) translateY(15.44318px);
+    -webkit-transform: rotateZ(-0.79221deg) translateY(12.85191px);
+            transform: rotateZ(-0.79221deg) translateY(12.85191px);
   }
   100% {
-    -webkit-transform: rotateZ(1.6562deg) translateY(-10.42968px);
-            transform: rotateZ(1.6562deg) translateY(-10.42968px);
+    -webkit-transform: rotateZ(1.12226deg) translateY(-5.61606px);
+            transform: rotateZ(1.12226deg) translateY(-5.61606px);
   }
 }
 
@@ -436,12 +436,12 @@
             transform: rotateX(0);
   }
   50% {
-    -webkit-transform: rotateZ(-0.3665deg) translateY(15.44318px);
-            transform: rotateZ(-0.3665deg) translateY(15.44318px);
+    -webkit-transform: rotateZ(-0.79221deg) translateY(12.85191px);
+            transform: rotateZ(-0.79221deg) translateY(12.85191px);
   }
   100% {
-    -webkit-transform: rotateZ(1.6562deg) translateY(-10.42968px);
-            transform: rotateZ(1.6562deg) translateY(-10.42968px);
+    -webkit-transform: rotateZ(1.12226deg) translateY(-5.61606px);
+            transform: rotateZ(1.12226deg) translateY(-5.61606px);
   }
 }
 
@@ -654,6 +654,10 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+}
+
+.other-itinerary .swiper-container .swiper .swiper-slide .itinerary-card .content .itinerary-introduce p {
+  margin-bottom: 0;
 }
 
 .other-itinerary .swiper-container .swiper-button-prev, .other-itinerary .swiper-container .swiper-button-next {
